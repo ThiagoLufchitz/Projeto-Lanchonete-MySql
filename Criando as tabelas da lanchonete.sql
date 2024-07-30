@@ -26,4 +26,24 @@ CREATE TABLE Pedido(
     FOREIGN KEY (ClienteCodigo) REFERENCES Cliente(Codigo)
 );
 
-CREATE TABLE ItempPedido();
+CREATE TABLE ItempPedido(
+    CodigoPedido INT,
+    CodigoLanches INT,
+    Quantidade INT,
+    PRIMARY KEY (CodigoPedido,CodigoLanches),
+    FOREIGN KEY (CodigoPedido) REFERENCES Pedido(Codigo),
+    FOREIGN KEY (CodigoLanches) REFERENCES Lanches(Codigo)
+);
+
+CREATE TABLE Entregador(
+    Codigo INT PRIMARY KEY,
+    Nome VARCHAR (100),
+    Telefone VARCHAR(15)
+);
+
+CREATE TABLE Entrega(
+    CodigoPedido INT PRIMARY KEY,
+    CodigoEntregador INT,
+    FOREIGN KEY (CodigoPedido) REFERENCES Pedido(Codigo),
+    FOREIGN KEY (CodigoEntregador) REFERENCES Entregador
+);
