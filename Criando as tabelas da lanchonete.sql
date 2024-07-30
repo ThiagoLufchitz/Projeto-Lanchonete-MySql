@@ -11,13 +11,6 @@ CREATE TABLE Cliente(
     Endereco VARCHAR(255)
 );
 
-CREATE TABLE Cliente(
-    Codigo INT PRIMARY KEY,
-    NomeCliente VARCHAR(100),
-    Telefone VARCHAR(15),
-    Endereco VARCHAR(255)
-);
-
 CREATE TABLE Pedido(
     Codigo INT PRIMARY KEY,
     DataEmissao DATE,
