@@ -38,5 +38,5 @@ CREATE TABLE Entrega(
     CodigoPedido INT PRIMARY KEY,
     CodigoEntregador INT,
     FOREIGN KEY (CodigoPedido) REFERENCES Pedido(Codigo),
-    FOREIGN KEY (CodigoEntregador) REFERENCES Entregador
+    FOREIGN KEY (CodigoEntregador) REFERENCES Entregador(Codigo)
 );
