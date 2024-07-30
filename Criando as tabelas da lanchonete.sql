@@ -15,8 +15,8 @@ CREATE TABLE Pedido(
     Codigo INT PRIMARY KEY,
     DataEmissao DATE,
     Status INT,
-    ClienteCodigo INT,
-    FOREIGN KEY (ClienteCodigo) REFERENCES Cliente(Codigo)
+    CodigoCliente INT,
+    FOREIGN KEY (CodigoCliente) REFERENCES Cliente(Codigo)
 );
 
 CREATE TABLE ItempPedido(
