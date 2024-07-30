@@ -19,7 +19,7 @@ CREATE TABLE Pedido(
     FOREIGN KEY (CodigoCliente) REFERENCES Cliente(Codigo)
 );
 
-CREATE TABLE ItempPedido(
+CREATE TABLE LanchePedido(
     CodigoPedido INT,
     CodigoLanches INT,
     Quantidade INT,
